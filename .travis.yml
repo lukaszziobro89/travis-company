@@ -1,0 +1,11 @@
+language: java
+sudo: false
+script: mvn clean verify
+deploy:
+  provider: heroku
+  skip_cleanup: true
+  api_key:
+    secure: df898355-9f80-449c-b8ba-9f6dac1e7d72
+  app: travis-company
+  on:
+    repo: lukaszziobro89/travis-company

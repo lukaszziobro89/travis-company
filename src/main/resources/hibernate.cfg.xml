@@ -16,7 +16,7 @@
         <!--<property name="connection.username">lukaszziobro_javaspring</property>-->
         <!--<property name="connection.password">London.11</property>-->
 
-        <property name="connection.url">jdbc:mysql://serwer1950798.home.pl:3306/29693844_travis_test_app_db?verifyServerCertificate=true;&amp;useSSL=true;&amp;requireSSL=true</property>
+        <property name="connection.url">jdbc:mysql://serwer1950798.home.pl:3306/29693844_travis_test_app_db?verifyServerCertificate=true&amp;useSSL=true&amp;requireSSL=true</property>
         <property name="connection.username">29693844_travis_test_app_db</property>
         <property name="connection.password">xoR!cDz4W2B8BTJD</property>
 

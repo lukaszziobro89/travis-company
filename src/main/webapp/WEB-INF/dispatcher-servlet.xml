@@ -29,7 +29,7 @@
         <!--<property name="user" value="lukaszziobro_javaspring"/>-->
         <!--<property name="password" value="London.11"/>-->
 
-        <property name="jdbcUrl" value="jdbc:mysql://serwer1950798.home.pl:3306/29693844_travis_test_app_db?useSSL=true"/>
+        <property name="jdbcUrl" value="jdbc:mysql://serwer1950798.home.pl:3306/29693844_travis_test_app_db?verifyServerCertificate=true;&amp;useSSL=true;&amp;requireSSL=true"/>
         <property name="user" value="29693844_travis_test_app_db"/>
         <property name="password" value="xoR!cDz4W2B8BTJD"/>
 

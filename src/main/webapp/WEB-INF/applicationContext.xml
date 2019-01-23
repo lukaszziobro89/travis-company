@@ -23,14 +23,14 @@
 
     <bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
         <property name="driverClass" value="com.mysql.jdbc.Driver"/>
-        <!--<property name="jdbcUrl" value="jdbc:mysql://sql.lukaszziobro.nazwa.pl:3306/lukaszziobro_javaspring?useSSL=false"/>-->
-        <!--<property name="user" value="lukaszziobro_javaspring"/>-->
-        <!--<property name="password" value="London.11"/>-->
+        <property name="jdbcUrl" value="jdbc:mysql://sql.lukaszziobro.nazwa.pl:3306/lukaszziobro_javaspring?useSSL=false"/>
+        <property name="user" value="lukaszziobro_javaspring"/>
+        <property name="password" value="London.11"/>
 
 
-        <property name="jdbcUrl" value="jdbc:mysql://serwer1950798.home.pl:3306/29693844_travis_test_app_db?verifyServerCertificate=true&amp;useSSL=true&amp;requireSSL=true"/>
-        <property name="user" value="29693844_travis_test_app_db"/>
-        <property name="password" value="xoR!cDz4W2B8BTJD"/>
+        <!--<property name="jdbcUrl" value="jdbc:mysql://serwer1950798.home.pl:3306/29693844_travis_test_app_db?verifyServerCertificate=true&amp;useSSL=true&amp;requireSSL=true"/>-->
+        <!--<property name="user" value="29693844_travis_test_app_db"/>-->
+        <!--<property name="password" value="xoR!cDz4W2B8BTJD"/>-->
 
 
         <property name="testConnectionOnCheckout" value="true" />

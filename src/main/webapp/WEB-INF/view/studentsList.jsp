@@ -20,7 +20,6 @@
             <th>First Name</th>
             <th>Last Name</th>
             <th>Email</th>
-            <th>Action</th>
         </tr>
         <c:forEach var="tempStudent" items="${student}" >
 
@@ -34,7 +33,9 @@
     </table>
 
 <br><br>
-    <form class="left_align" action="<%=request.getContextPath() %>/"><input type="submit" class="btn success" value="Home page"/></form>
+    <form class="left_align" action="<%=request.getContextPath() %>/">
+        <input type="submit" class="btn success" value="Home page"/>
+    </form>
 
 </body>
 </html>

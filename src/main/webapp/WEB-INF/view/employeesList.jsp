@@ -7,27 +7,25 @@
 <head>
     <meta charset="UTF-8">
 
-    <title>Students list</title>
+    <title>Employees list</title>
 
 </head>
 <body>
 
-    <h2>Students list</h2>
+    <h2>Employees list</h2>
 
     <table id="results" border="1" cellpadding="5" cellspacing="1" >
         <tr>
             <th>ID</th>
             <th>First Name</th>
             <th>Last Name</th>
-            <th>Email</th>
         </tr>
-        <c:forEach var="tempStudent" items="${student}" >
+        <c:forEach var="tempEmployee" items="${employee}" >
 
             <tr>
-                <td>${tempStudent.id}</td>
-                <td>${tempStudent.firstName}</td>
-                <td>${tempStudent.lastName}</td>
-                <td>${tempStudent.email}</td>
+                <td>${tempEmployee.id}</td>
+                <td>${tempEmployee.name}</td>
+                <td>${tempEmployee.surname}</td>
             </tr>
         </c:forEach>
     </table>

@@ -1,4 +1,8 @@
 package pl.employee;
 
-public class EmployeeDAO {
+import java.util.List;
+
+public interface EmployeeDAO {
+    /** Return list of students  */
+    List<Employee> getEmployees();
 }

@@ -73,11 +73,11 @@ public abstract class Department implements DepartmentsActions{
     public void addEmployeeToEmployeesList(Employee employee) throws EmployeeAlreadyInEmployeesListException {
         if(employeesList.contains(employee)){
             throw new EmployeeAlreadyInEmployeesListException("Employee " + employee.toString() + " is already in employees list.");
-        }else if (!departmentType.equals(employee.getDepartment())) {
-            throw new DifferentDepartmentTypeException("Employees department " + departmentType +
-                    " is different then job department " + employee.getDepartment());
-        }else {
-                employeesList.add(employee);
+//        }else if (!departmentType.equals(employee.getDepartment())) {
+//            throw new DifferentDepartmentTypeException("Employees department " + departmentType +
+//                    " is different then job department " + employee.getDepartment());
+//        }else {
+//                employeesList.add(employee);
         }
     }
 

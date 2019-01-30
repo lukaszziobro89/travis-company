@@ -12,6 +12,7 @@
 <h2>Hello World 4</h2>
 
 <form class="center_align" action="showStudents" method="get"><input type="submit" class="btn success" value="Show students list"/></form>
+<form class="center_align" action="showEmployees" method="get"><input type="submit" class="btn success" value="Show employees list"/></form>
 
 </body>
 </html>

@@ -4,20 +4,53 @@ import pl.department.DepartmentType;
 import pl.exceptions.*;
 import pl.job.Job;
 
+import javax.persistence.*;
+import javax.validation.Valid;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.util.List;
 
+@Entity
+@Table(name = "employee")
 public class Employee {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int id;
+
+    @Column(name = "first_name")
+    @Valid
+    @NotBlank(message = "Field cannot be blank.")
+    @Size(min = 2, message = "At least 2 characters required.")
     private String name;
+
+    @Column(name = "last_name")
+    @Valid
+    @NotBlank(message = "Field cannot be blank.")
+    @Size(min = 2, message = "At least 2 characters required.")
     private String surname;
+
+    @Column(name = "age")
     private int age;
+
+    @Column(name = "salary")
     private double salary;
+
+    @Column(name = "email")
     private String email;
-    private DepartmentType department;
-    private Job job;
-    private List<String> languages;
+
+//    @Column(name = "department")
+//    private DepartmentType department;
+
+//    private Job job;
+
+//    @Column(name = "languages")
+//    private List<String> languages;
 
     private static int totalEmployeesCounter = 0;
+
+    public Employee() {
+    }
 
     public Employee(
             String name,
@@ -48,16 +81,16 @@ public class Employee {
                 this.salary = salary;
             }
         this.email = email;
-        this.department = department;
-            if (this.getDepartment().equals(job.getDepartmentType())) {
-                this.job = job;
-            } else {
-                throw new DifferentDepartmentTypeException("Employees department " + this.department +
-                        " is different then job departement " + job.getDepartmentType());
+//        this.department = department;
+//            if (this.getDepartment().equals(job.getDepartmentType())) {
+//                this.job = job;
+//            } else {
+//                throw new DifferentDepartmentTypeException("Employees department " + this.department +
+//                        " is different then job departement " + job.getDepartmentType());
             }
-        this.languages = languages;
-        totalEmployeesCounter++;
-    }
+//        this.languages = languages;
+//        totalEmployeesCounter++;
+//    }
 
     @Override
     public String toString() {
@@ -68,9 +101,9 @@ public class Employee {
                 ", age=" + age +
                 ", salary=" + salary +
                 ", email='" + email + '\'' +
-                ", department=" + department +
-                ", job=" + job.getJobTitle() +
-                ", languages=" + languages +
+//                ", department=" + department +
+//                ", job=" + job.getJobTitle() +
+//                ", languages=" + languages +
                 '}';
     }
 
@@ -86,9 +119,11 @@ public class Employee {
         if (name != null ? !name.equals(employee.name) : employee.name != null) return false;
         if (surname != null ? !surname.equals(employee.surname) : employee.surname != null) return false;
         if (email != null ? !email.equals(employee.email) : employee.email != null) return false;
-        if (department != employee.department) return false;
-        if (job != null ? !job.equals(employee.job) : employee.job != null) return false;
-        return languages != null ? languages.equals(employee.languages) : employee.languages == null;
+//        if (department != employee.department) return false;
+//        if (job != null ? !job.equals(employee.job) : employee.job != null) return false;
+//        return languages != null ? languages.equals(employee.languages) : employee.languages == null;
+//=======================================================================================
+        return email != null ? email.equals(employee.email) : employee.email == null;
     }
 
     @Override
@@ -101,27 +136,27 @@ public class Employee {
         temp = Double.doubleToLongBits(salary);
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         result = 31 * result + (email != null ? email.hashCode() : 0);
-        result = 31 * result + (department != null ? department.hashCode() : 0);
-        result = 31 * result + (job != null ? job.hashCode() : 0);
-        result = 31 * result + (languages != null ? languages.hashCode() : 0);
+//        result = 31 * result + (department != null ? department.hashCode() : 0);
+//        result = 31 * result + (job != null ? job.hashCode() : 0);
+//        result = 31 * result + (languages != null ? languages.hashCode() : 0);
         return result;
     }
 
-    public List<String> getLanguages() {
-        return languages;
-    }
+//    public List<String> getLanguages() {
+//        return languages;
+//    }
 
-    public void setLanguages(List<String> languages) {
-        this.languages = languages;
-    }
+//    public void setLanguages(List<String> languages) {
+//        this.languages = languages;
+//    }
 
-    public DepartmentType getDepartment() {
-        return department;
-    }
+//    public DepartmentType getDepartment() {
+//        return department;
+//    }
 
-    public void setDepartment(DepartmentType department) {
-        this.department = department;
-    }
+//    public void setDepartment(DepartmentType department) {
+//        this.department = department;
+//    }
 
     public void increaseSalary(double raiseAmount){
         if (raiseAmount < 0 ) {
@@ -209,16 +244,16 @@ public class Employee {
         return totalEmployeesCounter;
     }
 
-    public Job getJob() {
-        return job;
-    }
+//    public Job getJob() {
+//        return job;
+//    }
 
     public void setJob(Job job) {
-        if (this.getDepartment().equals(job.getDepartmentType())) {
-            this.job = job;
-        } else {
-            throw new DifferentDepartmentTypeException("Employees department " + this.department +
-                    " is different then job department " + job.getDepartmentType());
+//        if (this.getDepartment().equals(job.getDepartmentType())) {
+//            this.job = job;
+//        } else {
+//            throw new DifferentDepartmentTypeException("Employees department " + this.department +
+//                    " is different then job department " + job.getDepartmentType());
         }
     }
-}
+//}

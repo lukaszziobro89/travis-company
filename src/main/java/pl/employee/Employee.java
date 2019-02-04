@@ -42,7 +42,6 @@ public class Employee {
 //    @Column(name = "department")
 //    private DepartmentType department;
 
-    @Column(name = "job")
     private Job job;
 
 //    @Column(name = "languages")

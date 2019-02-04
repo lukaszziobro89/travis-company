@@ -1,0 +1,129 @@
+body {
+    background-color: white;
+}
+
+h2 {
+    color: green;
+    text-align: center;
+}
+
+p {
+    font-family: Verdana;
+    font-size: 15px;
+    text-align: center;
+}
+
+form{
+    text-align:left;
+}
+
+form.buttons{
+    text-align:left;
+    display: inline;
+}
+
+form.left_align{
+    text-align:left;
+    display: inline;
+}
+
+form.center_align{
+    text-align:center;
+}
+
+form.right_align{
+    text-align:right;
+    display: inline;
+}
+
+
+.error {color:red}
+
+.btn {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Green */
+.success {
+    border-color: #4CAF50;
+    color: green;
+}
+
+.success:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Blue */
+.info {
+    border-color: #2196F3;
+    color: dodgerblue
+}
+
+.info:hover {
+    background: #2196F3;
+    color: white;
+}
+
+/* Orange */
+.warning {
+    border-color: #ff9800;
+    color: orange;
+}
+
+.warning:hover {
+    background: #ff9800;
+    color: white;
+}
+
+/* Red */
+.danger {
+    border-color: #f44336;
+    color: red
+}
+
+.danger:hover {
+    background: #f44336;
+    color: white;
+}
+
+/* Gray */
+.default {
+    border-color: #e7e7e7;
+    color: black;
+}
+
+.default:hover {
+    background: #e7e7e7;
+}
+
+#results {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    line-height: 5px;
+}
+
+#results td, #results th {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+#results tr:nth-child(even){
+    background-color: #f2f2f2;}
+
+#results tr:hover {
+    background-color: #ddd;}
+
+#results th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}

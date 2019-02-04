@@ -42,7 +42,8 @@ public class Employee {
 //    @Column(name = "department")
 //    private DepartmentType department;
 
-//    private Job job;
+    @Column(name = "job")
+    private Job job;
 
 //    @Column(name = "languages")
 //    private List<String> languages;
@@ -244,9 +245,9 @@ public class Employee {
         return totalEmployeesCounter;
     }
 
-//    public Job getJob() {
-//        return job;
-//    }
+    public Job getJob() {
+        return job;
+    }
 
     public void setJob(Job job) {
 //        if (this.getDepartment().equals(job.getDepartmentType())) {
@@ -254,6 +255,7 @@ public class Employee {
 //        } else {
 //            throw new DifferentDepartmentTypeException("Employees department " + this.department +
 //                    " is different then job department " + job.getDepartmentType());
+                    this.job = job;
         }
     }
 //}

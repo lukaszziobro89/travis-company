@@ -19,6 +19,7 @@
             <th>ID</th>
             <th>First Name</th>
             <th>Last Name</th>
+            <th>Job</th>
         </tr>
         <c:forEach var="tempEmployee" items="${employee}" >
 
@@ -26,6 +27,7 @@
                 <td>${tempEmployee.id}</td>
                 <td>${tempEmployee.name}</td>
                 <td>${tempEmployee.surname}</td>
+                <td>${tempEmployee.job}</td>
             </tr>
         </c:forEach>
     </table>
